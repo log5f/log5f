@@ -7,7 +7,7 @@ package org.log5f.error
 		public function DocumentInvalidError()
 		{
 			super(ResourceManager.instance.
-				getString("errorPropertiesFileIsNotXML"), 2002);
+				getString("errorConfigIsNotXML"), 2002);
 		}
 		
 		public function toString():String
