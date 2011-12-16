@@ -85,7 +85,7 @@ package org.log5f.core
 		 */
 		public function equals(priority:Priority):Boolean
 		{
-			return this.level == priority.level;
+			return priority && this.level == priority.level;
 		}
 		
 		/**
@@ -102,7 +102,7 @@ package org.log5f.core
 		 */
 		public function isGreaterOrEqual(priority:Priority):Boolean
 		{
-			return this.level >= priority.level;
+			return priority && this.level >= priority.level;
 		}
 		
 		/**

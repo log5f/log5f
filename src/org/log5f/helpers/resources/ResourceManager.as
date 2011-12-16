@@ -8,22 +8,21 @@ package org.log5f.helpers.resources
 	import mx.resources.ResourceBundle;
 	import mx.utils.StringUtil;
 	
+	import org.log5f.helpers.resources.en_US.bundle;
+	import org.log5f.log5f_internal;
+	
+	use namespace log5f_internal;
+	
 	//-------------------------------------
 	//	Other metadata
 	//-------------------------------------
 	
-	[ExcludeClass]
-	[ResourceBundle("log")]
-
 	public class ResourceManager
 	{
-		//----------------------------------------------------------------------
-		//
-		//	Class constants
-		//
-		//----------------------------------------------------------------------
-		
-		private static const bundle:ResourceBundle;
+		private static const bundles:Object = 
+		{
+			"en_US" : org.log5f.helpers.resources.en_US.bundle()
+		};
 		
 		//----------------------------------------------------------------------
 		//
@@ -61,8 +60,16 @@ package org.log5f.helpers.resources
 			super();
 			
 			if (ResourceManager._instance)
-				throw new Error("Singleton error");
+				throw new Error(getString(Resource.ERROR_SINGLETON, ["ResourceManager"]));
 		}
+		
+		//----------------------------------------------------------------------
+		//
+		//	Variables
+		//
+		//----------------------------------------------------------------------
+		
+		log5f_internal var chain:Array = ["en_US"];
 		
 		//----------------------------------------------------------------------
 		//
@@ -99,7 +106,18 @@ package org.log5f.helpers.resources
 		
 		private function getResource(type:String, name:String):Object
 		{
-			return ResourceManager.bundle[type](name);
+			const n:int = chain.length;
+			for (var i:int = 0; i < n; i++)
+			{
+				var locale:String = chain[i];
+				
+				var bundle:Object = bundles[locale];
+				
+				if (bundle && name in bundle)
+					return bundle[name];
+			}
+			
+			return null;
 		}
 	}
 }
