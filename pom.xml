@@ -70,9 +70,9 @@
 	</licenses>
 
 	<scm>
-	    <url>http://log5f.googlecode.com/svn/trunk/main</url>
-		<connection>scm:svn:http://log5f.googlecode.com/svn/trunk/main</connection>
-	    <developerConnection>scm:svn:https://log5f.googlecode.com/svn/trunk/main</developerConnection>
+	    <url>http://github.com/log5f/log5f.git</url>
+		<connection>scm:git:https://github.com/log5f/log5f.git</connection>
+	    <developerConnection>scm:git:https://github.com/log5f/log5f.git</developerConnection>
 	</scm>
 	
 	<organization>

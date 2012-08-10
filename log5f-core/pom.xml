@@ -5,6 +5,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>log5f-core</artifactId>
+	<version>1.1-SNAPSHOT</version>
 	<packaging>swc</packaging>
 	<name>Log5F Core Library</name>
 	<description>Log5F Core Library</description>
@@ -16,15 +17,7 @@
 		<artifactId>log5f</artifactId>
 		<version>1.1-SNAPSHOT</version>
 	</parent>
-
-	<!-- Project Specific -->
 	
-	<scm>
-	    <url>http://log5f.googlecode.com/svn/trunk/main/log5f</url>
-		<connection>scm:svn:http://log5f.googlecode.com/svn/trunk/main/log5f</connection>
-	    <developerConnection>scm:svn:https://log5f.googlecode.com/svn/trunk/main/log5f</developerConnection>
-	</scm>
-
 	<!-- Build Information -->
 	
 	<build>
