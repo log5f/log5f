@@ -4,7 +4,7 @@
 	
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.log5f</groupId>
-	<artifactId>main</artifactId>
+	<artifactId>log5f</artifactId>
 	<version>1.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Log5F</name>
@@ -28,7 +28,7 @@
 	</properties>
 	
 	<modules>
-		<module>log5f</module>
+		<module>log5f-core</module>
 		<module>log5f-fp10.1</module>
 	</modules>
 
