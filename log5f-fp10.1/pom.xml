@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<!-- Header -->
-
+	
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>log5f-core</artifactId>
+	<artifactId>log5f-fp10.1</artifactId>
 	<packaging>swc</packaging>
-	<name>Log5F Core</name>
-	<description>Log5F Core Library</description>
-
+	<name>Log5F for FP 10.1</name>
+	<description>Log5F for Flash Player 10.1</description>
+	
 	<!-- Parent -->
 	
 	<parent>
@@ -16,15 +16,25 @@
 		<artifactId>log5f</artifactId>
 		<version>1.1-SNAPSHOT</version>
 	</parent>
-
+	
+	<!-- Dependencies -->
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.log5f</groupId>
+			<artifactId>log5f</artifactId>
+			<type>swc</type>
+		</dependency>
+	</dependencies>
+	
 	<!-- Project Specific -->
 	
 	<scm>
-	    <url>http://log5f.googlecode.com/svn/trunk/main/log5f</url>
-		<connection>scm:svn:http://log5f.googlecode.com/svn/trunk/main/log5f</connection>
-	    <developerConnection>scm:svn:https://log5f.googlecode.com/svn/trunk/main/log5f</developerConnection>
+	    <url>http://log5f.googlecode.com/svn/trunk/main/log5f-fp10.1</url>
+		<connection>scm:svn:http://log5f.googlecode.com/svn/trunk/main/log5f-fp10.1</connection>
+	    <developerConnection>scm:svn:https://log5f.googlecode.com/svn/trunk/main/log5f-fp10.1</developerConnection>
 	</scm>
-
+	
 	<!-- Build Information -->
 	
 	<build>
@@ -37,5 +47,6 @@
 			</plugin>
 		</plugins>
 	</build>
+	
 	
 </project>
